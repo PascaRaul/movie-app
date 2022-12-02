@@ -16,7 +16,7 @@ function App() {
   const favoritesTitles = favorites.map((f) => f.Title);
 
   const getMovieRequest = async function (searchValue) {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=bbee68ec`;
+    const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=bbee68ec`;
 
     const response = await fetch(url);
     const responseJson = await response.json();
