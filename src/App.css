@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
   color: white;
+  background-color: rgb(26, 26, 26);
 }
 
-.App-link {
-  color: #61dafb;
+.container__mov {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container__fav {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.container__movies {
+  margin-top: 20px;
+  position: relative;
+}
+
+.container__favorites {
+  flex-shrink: 0;
+  width: 250px;
+  height: 394px;
+}
+
+.img_fav {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.movies__title {
+  text-align: center;
+  padding: 10px;
+  font-size: 32px;
+  background-color: rgb(0, 0, 0);
+}
+
+.favorites__title {
+  background-color: rgb(26, 26, 26);
+  text-align: start;
+}
+
+.input__container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+img {
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+input {
+  padding: 5px;
+  margin-left: 10px;
+  border: 1px solid white;
+  font-size: 20px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+button {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  bottom: 101%;
+  left: 87%;
+
+  background-color: rgb(65, 65, 65, 0.2);
+  padding: 5px;
+  z-index: 999;
+}
+
+button:hover {
+  background-color: rgb(220, 4, 4);
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.heart {
+  position: absolute;
+  font-size: 24px;
+  bottom: 92%;
+  left: 87%;
+  z-index: 999;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
